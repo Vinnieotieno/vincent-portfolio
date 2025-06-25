@@ -71,16 +71,16 @@ const Hero = () => {
               >
                 <div className="relative">
                   <motion.div
-                    className="w-92 h-92 sm:w-80 sm:h-80 glass rounded-full p-3 glow"
+                    className="w-[560px] h-[680px] sm:w-[580px] sm:h-[700px] glass rounded-full p-6 glow"
                     whileHover={{ scale: 1.05 }}
                     transition={{ type: "spring", stiffness: 300 }}
                   >
                     <Image
                       src="/vincent.jpg"
                       alt="Vincent Otieno - Software Developer"
-                      width={420}
-                      height={420}
-                      className="w-full h-full rounded-full object-cover"
+                      width={580}
+                      height={700}
+                      className="w-full h-full rounded-full object-contain"
                       priority
                     />
                   </motion.div>
@@ -370,16 +370,16 @@ const Hero = () => {
               >
                 <div className="relative">
                   <motion.div
-                    className="w-96 h-96 xl:w-[450px] xl:h-[450px] glass rounded-full p-4 glow"
+                    className="w-[580px] h-[700px] xl:w-[640px] xl:h-[760px] glass rounded-full p-6 glow"
                     whileHover={{ scale: 1.05 }}
                     transition={{ type: "spring", stiffness: 300 }}
                   >
                     <Image
                       src="/vincent.jpg"
                       alt="Vincent Otieno - Software Developer"
-                      width={450}
-                      height={450}
-                      className="w-full h-full rounded-full object-cover"
+                      width={640}
+                      height={760}
+                      className="w-full h-full rounded-full object-contain"
                       priority
                     />
                   </motion.div>
