@@ -94,7 +94,7 @@ const Contact = () => {
         >
           <h2 className="mb-6 text-4xl font-bold lg:text-5xl text-gradient">Get In Touch</h2>
           <p className="max-w-3xl mx-auto text-xl text-gray-800">
-            Ready to start your next project? Let's discuss how we can work together to bring your ideas to life.
+            Ready to start your next project? Let&apos;s discuss how we can work together to bring your ideas to life.
           </p>
         </motion.div>
 
@@ -106,9 +106,9 @@ const Contact = () => {
             transition={{ duration: 0.8, delay: 0.2 }}
             className="bg-white rounded-2xl shadow-lg p-8 flex flex-col justify-between border border-gray-100"
           >
-            <h3 className="mb-6 text-2xl font-bold text-gray-900">Let's Connect</h3>
+            <h3 className="mb-6 text-2xl font-bold text-gray-900">Let&apos;s Connect</h3>
             <p className="mb-8 leading-relaxed text-gray-800">
-              I'm always interested in new opportunities and exciting projects. Whether you have a question, want to
+              I&apos;m always interested in new opportunities and exciting projects. Whether you have a question, want to
               discuss a project, or just want to say hello, feel free to reach out!
             </p>
             <div className="space-y-6">
@@ -248,7 +248,7 @@ const Contact = () => {
                   animate={{ opacity: 1, y: 0 }}
                   className="text-center text-green-500 font-semibold mt-4"
                 >
-                  Message sent successfully! I'll get back to you soon.
+                  Message sent successfully! I&apos;ll get back to you soon.
                 </motion.div>
               )}
               {submitStatus === "error" && (

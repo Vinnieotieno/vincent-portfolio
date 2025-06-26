@@ -10,8 +10,8 @@ export default function Scene3DWrapper() {
   useEffect(() => {
     const loadScene = async () => {
       try {
-        const module = await import('./Scene3D');
-        setScene3D(() => module.default);
+        const sceneModule = await import('./Scene3D');
+        setScene3D(() => sceneModule.default);
       } catch (err) {
         console.error('Failed to load 3D scene:', err);
         setError('Failed to load 3D scene');

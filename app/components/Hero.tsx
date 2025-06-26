@@ -141,7 +141,7 @@ const Hero = () => {
                   transition={{ duration: 0.8, delay: 0.4 }}
                 >
                   <span className="inline-flex items-center px-4 py-2 text-sm font-medium rounded-full glass text-muted">
-                    👋 Hello, I'm
+                    👋 Hello, I&apos;m
                   </span>
                 </motion.div>
 
@@ -256,7 +256,7 @@ const Hero = () => {
                   transition={{ duration: 0.8, delay: 0.2 }}
                 >
                   <span className="inline-flex items-center px-4 py-2 text-sm font-medium rounded-full glass text-muted">
-                    👋 Hello, I'm
+                    👋 Hello, I&apos;m
                   </span>
                 </motion.div>
 
