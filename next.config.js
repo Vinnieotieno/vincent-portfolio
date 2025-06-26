@@ -1,26 +1,31 @@
-// next.config.js
 /** @type {import('next').NextConfig} */
 const nextConfig = {
-  reactStrictMode: true,
-  transpilePackages: ['three'],
+  reactStrictMode: false,
+  transpilePackages: ['three', '@react-three/fiber', '@react-three/drei'],
   webpack: (config, { isServer }) => {
+    // Ensure proper module resolution
+    config.resolve.alias = {
+      ...config.resolve.alias,
+      'react/jsx-runtime': require.resolve('react/jsx-runtime'),
+      'react-dom/client': require.resolve('react-dom/client'),
+    };
+    
+    // Handle browser-specific modules
     if (!isServer) {
-      // Don't resolve 'fs' module on the client to prevent this error on build
       config.resolve.fallback = {
+        ...config.resolve.fallback,
         fs: false,
         path: false,
+        crypto: false,
       };
     }
     
-    // Ensure single React instance
-    config.resolve.alias = {
-      ...config.resolve.alias,
-      react: require.resolve('react'),
-      'react-dom': require.resolve('react-dom'),
-    };
-    
     return config;
   },
-};
+  // Remove experimental features that might cause issues
+  images: {
+    domains: [],
+  },
+}
 
-module.exports = nextConfig;
+module.exports = nextConfig

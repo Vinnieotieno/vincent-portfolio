@@ -12,7 +12,7 @@ const About = () => {
 
   const experiences = [
     {
-      title: "Volunteer Website Developer and Digital Strategist",
+      title: "Website Developer and Digital Strategist",
       company: "Lead Foundation Africa",
       period: "January 2025–Present",
       description:
@@ -26,7 +26,7 @@ const About = () => {
         "Leading digital marketing strategies, managing SEO initiatives, overseeing social media campaigns, and maintaining system operations.",
     },
     {
-      title: "Website Developer/IT Support (Freelance)",
+      title: "Website Developer/IT Support Assistant (Freelance)",
       company: "Globeflight Worldwide Express",
       period: "September 2023–January 2024",
       description:
@@ -46,7 +46,7 @@ const About = () => {
         >
           <h2 className="mb-6 text-4xl font-bold lg:text-5xl text-gradient">About Me</h2>
           <p className="max-w-3xl mx-auto text-xl text-gray-800">
-            I am a software developer with expertise in React frontend development and project management. Proven
+            I am a Frontend developer with expertise in React frontend development  with a key eye in designing and giving user look and feel, and project management. Proven
             ability to deliver innovative solutions, improve efficiency, and drive project success. Skilled also in
             digital strategy, including SEO and social media management.
           </p>
@@ -58,28 +58,28 @@ const About = () => {
             initial={{ opacity: 0, x: -50 }}
             animate={inView ? { opacity: 1, x: 0 } : {}}
             transition={{ duration: 0.8, delay: 0.2 }}
-            className="bg-white rounded-2xl shadow-lg p-8 flex flex-col justify-between border border-gray-100"
+            className="flex flex-col justify-between p-8 bg-white border border-gray-100 shadow-lg rounded-2xl"
           >
             <h3 className="mb-6 text-2xl font-bold text-gray-900">Personal Information</h3>
             <div className="space-y-4">
               <div className="flex items-center gap-3">
                 <User className="text-blue-500" size={20} />
-                <span className="text-gray-800 font-medium">Name:</span>
+                <span className="font-medium text-gray-800">Name:</span>
                 <span className="ml-2 text-gray-900">Otieno Vincent Odhiambo</span>
               </div>
               <div className="flex items-center gap-3">
                 <Mail className="text-blue-500" size={20} />
-                <span className="text-gray-800 font-medium">Email:</span>
+                <span className="font-medium text-gray-800">Email:</span>
                 <span className="ml-2 text-gray-900">vincentotienoakuku@gmail.com</span>
               </div>
               <div className="flex items-center gap-3">
                 <Phone className="text-blue-500" size={20} />
-                <span className="text-gray-800 font-medium">Phone:</span>
+                <span className="font-medium text-gray-800">Phone:</span>
                 <span className="ml-2 text-gray-900">+254797398004</span>
               </div>
               <div className="flex items-center gap-3">
                 <MapPin className="text-blue-500" size={20} />
-                <span className="text-gray-800 font-medium">Location:</span>
+                <span className="font-medium text-gray-800">Location:</span>
                 <span className="ml-2 text-gray-900">Nairobi, Kenya</span>
               </div>
             </div>
@@ -100,7 +100,7 @@ const About = () => {
           </motion.div>
 
           {/* Divider for mobile */}
-          <div className="block lg:hidden my-8 border-t border-gray-200"></div>
+          <div className="block my-8 border-t border-gray-200 lg:hidden"></div>
 
           {/* Experience */}
           <motion.div
@@ -116,9 +116,9 @@ const About = () => {
                 initial={{ opacity: 0, y: 20 }}
                 animate={inView ? { opacity: 1, y: 0 } : {}}
                 transition={{ duration: 0.6, delay: 0.6 + index * 0.1 }}
-                className="bg-white rounded-xl shadow-md p-6 border border-gray-100 hover:shadow-lg transition-shadow duration-300"
+                className="p-6 transition-shadow duration-300 bg-white border border-gray-100 shadow-md rounded-xl hover:shadow-lg"
               >
-                <h4 className="text-lg font-semibold text-blue-700 mb-1">{exp.title}</h4>
+                <h4 className="mb-1 text-lg font-semibold text-blue-700">{exp.title}</h4>
                 <p className="font-medium text-gray-800">{exp.company}</p>
                 <p className="mb-3 text-sm text-gray-700">{exp.period}</p>
                 <p className="text-gray-800">{exp.description}</p>

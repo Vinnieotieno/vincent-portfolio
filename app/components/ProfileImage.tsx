@@ -6,6 +6,8 @@ interface ProfileImageProps {
   className?: string
   priority?: boolean
   sizes?: string
+  src?: string
+  alt?: string
 }
 
 const ProfileImage = ({ 
@@ -13,12 +15,14 @@ const ProfileImage = ({
   height = 300, 
   className = "", 
   priority = false,
-  sizes = "(max-width: 768px) 280px, 320px"
+  sizes = "(max-width: 768px) 280px, 320px",
+  src = "/vincent.webp",
+  alt = "Vincent Otieno"
 }: ProfileImageProps) => {
   return (
     <Image
-      src="/vincent.webp"
-      alt="Vincent Otieno"
+      src={src}
+      alt={alt}
       width={width}
       height={height}
       className={`object-cover object-center ${className}`}

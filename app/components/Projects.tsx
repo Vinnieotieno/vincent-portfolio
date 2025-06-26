@@ -21,50 +21,50 @@ const Projects = () => {
       description:
         "A comprehensive e-commerce platform enabling vendors to upload products and clients to shop online. Built with modern web technologies for optimal performance.",
       longDescription:
-        "BigDrop is a full-featured e-commerce platform that I developed for Globeflight Worldwide Express. The platform features vendor management, product catalog, shopping cart functionality, payment integration, and admin dashboard. Built with React, Node.js, and MongoDB for scalability and performance.",
-      image: "/placeholder.svg?height=400&width=600",
-      technologies: ["React", "Node.js", "MongoDB", "Express", "Stripe"],
+        "BigDrop is a full-featured e-commerce platform that I developed for online shopping in Kenya. The platform features vendor management, product catalog, shopping cart functionality, payment integration, and admin dashboard. Built with WordPress/WooCommerce for scalability and performance, it provides a complete solution for online retail operations.",
+      image: "/project-images/bigdrop-screenshot.jpg",
+      technologies: ["WordPress", "WooCommerce", "PHP", "MySQL", "JavaScript"],
       liveUrl: "https://bigdrop.co.ke",
       githubUrl: "https://github.com/vincentotieno/bigdrop",
       featured: true,
     },
     {
       id: 2,
-      title: "Globeflight Dashboard",
+      title: "Globeflight Kenya Website",
       description:
-        "Internal dashboard for streamlined communication and collaboration among different departments with real-time updates and analytics.",
+        "Modern corporate website for Globeflight Kenya with focus on logistics and courier services.",
       longDescription:
-        "An internal communication and project management dashboard designed to improve collaboration between different departments at Globeflight. Features include real-time messaging, task management, file sharing, and analytics dashboard with performance metrics.",
-      image: "/placeholder.svg?height=400&width=600",
-      technologies: ["React", "TypeScript", "Firebase", "Chart.js"],
-      liveUrl: "https://globeflight-dashboard.netlify.app",
-      githubUrl: "https://github.com/vincentotieno/globeflight-dashboard",
+        "A professional corporate website for Globeflight Kenya, a leading logistics and courier services company. The site features modern design, service showcases, tracking functionality, and contact management. Built with React frontend and Node.js/Express/PostgreSQL backend for optimal user experience and performance.",
+      image: "/project-images/globeflight-screenshot.jpg",
+      technologies: ["React", "Node.js", "Express", "PostgreSQL", "JavaScript"],
+      liveUrl: "https://globeflight.co.ke",
+      githubUrl: "https://github.com/vincentotieno/globeflight",
       featured: true,
     },
     {
       id: 3,
-      title: "Lead Foundation Africa Website",
+      title: "LEAD Foundation Africa Website",
       description:
-        "Modern, responsive website for Lead Foundation Africa with focus on digital strategy and user engagement.",
+        "Modern, responsive website for LEAD Foundation Africa with focus on digital strategy and user engagement.",
       longDescription:
-        "A comprehensive website for Lead Foundation Africa featuring modern design, content management system, donation integration, and SEO optimization. The site focuses on improving visibility and outreach for the foundation's mission.",
-      image: "/placeholder.svg?height=400&width=600",
-      technologies: ["Next.js", "Tailwind CSS", "Strapi CMS", "PayPal API"],
+        "A comprehensive website for LEAD Foundation Africa featuring modern design, content management system, donation integration, and SEO optimization. Built with Next.js, TypeScript, and modern web technologies for optimal performance and user experience. The site showcases mental health initiatives, community development programs, and youth empowerment across Africa.",
+      image: "/project-images/lead-africa-screenshot.jpg",
+      technologies: ["Next.js", "TypeScript", "JavaScript", "HTML5", "CSS3"],
       liveUrl: "https://leadfoundationafrica.org",
       githubUrl: "https://github.com/vincentotieno/lead-foundation",
       featured: false,
     },
     {
       id: 4,
-      title: "Portfolio Website",
+      title: "Zewan Construction Website",
       description:
-        "Modern, responsive portfolio website with 3D animations, dark/light mode, and advanced interactions.",
+        "Professional construction company website with modern design and comprehensive service showcase.",
       longDescription:
-        "A cutting-edge portfolio website built with Next.js featuring 3D animations, glass morphism design, dark/light mode toggle, and advanced micro-interactions. Optimized for performance and SEO with modern web technologies.",
-      image: "/placeholder.svg?height=400&width=600",
-      technologies: ["Next.js", "Three.js", "Framer Motion", "Tailwind CSS"],
-      liveUrl: "https://vincentotieno.dev",
-      githubUrl: "https://github.com/vincentotieno/portfolio",
+        "A cutting-edge website for Zewan Construction featuring modern design, service showcases, project portfolios, and client testimonials. Built with Next.js and modern web technologies, the site showcases construction services including custom home building, renovations, and commercial projects.",
+      image: "/project-images/zewan-screenshot.jpg",
+      technologies: ["Next.js", "React", "TypeScript", "Tailwind CSS", "Framer Motion"],
+      liveUrl: "https://zewan.vercel.app",
+      githubUrl: "https://github.com/vincentotieno/zewan-construction",
       featured: false,
     },
   ]
@@ -93,6 +93,8 @@ const Projects = () => {
         <div className="grid md:grid-cols-2 gap-8">
           <div>
             <ProfileImage
+              src={project.image}
+              alt={project.title}
               width={600}
               height={400}
               className="w-full h-64 object-cover rounded-xl mb-4"
@@ -163,6 +165,8 @@ const Projects = () => {
               >
                 <div className="relative overflow-hidden rounded-xl mb-6">
                   <ProfileImage
+                    src={project.image}
+                    alt={project.title}
                     width={600}
                     height={400}
                     className="w-full h-64 object-cover transition-transform duration-300 group-hover:scale-105 rounded-xl"

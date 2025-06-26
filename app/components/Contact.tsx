@@ -36,14 +36,18 @@ const Contact = () => {
         body: JSON.stringify(formData),
       })
 
+      const data = await response.json()
+
       if (response.ok) {
         setSubmitStatus("success")
         setFormData({ name: "", email: "", subject: "", message: "" })
       } else {
         setSubmitStatus("error")
+        console.error("Email error:", data.error)
       }
     } catch (error) {
       setSubmitStatus("error")
+      console.error("Network error:", error)
     } finally {
       setIsSubmitting(false)
       setTimeout(() => setSubmitStatus("idle"), 5000)

@@ -5,20 +5,45 @@ export async function POST(request: NextRequest) {
   try {
     const { name, email, subject, message } = await request.json()
 
-    // Create transporter
-    const transporter = nodemailer.createTransporter({
-      host: process.env.SMTP_HOST,
-      port: Number.parseInt(process.env.SMTP_PORT || "587"),
+    // Validate required fields
+    if (!name || !email || !subject || !message) {
+      return NextResponse.json(
+        { error: "Missing required fields" },
+        { status: 400 }
+      )
+    }
+
+    // Validate environment variables
+    if (!process.env.EMAIL_SERVER_HOST || !process.env.EMAIL_SERVER_USER || !process.env.EMAIL_SERVER_PASSWORD) {
+      console.error("Missing email configuration:", {
+        host: !!process.env.EMAIL_SERVER_HOST,
+        user: !!process.env.EMAIL_SERVER_USER,
+        password: !!process.env.EMAIL_SERVER_PASSWORD,
+      })
+      return NextResponse.json(
+        { error: "Email server not configured" },
+        { status: 500 }
+      )
+    }
+
+    // Create transporter with Gmail SMTP configuration
+    const transporter = nodemailer.createTransport({
+      service: "gmail",
+      host: process.env.EMAIL_SERVER_HOST,
+      port: Number.parseInt(process.env.EMAIL_SERVER_PORT || "587"),
       secure: false,
       auth: {
-        user: process.env.SMTP_USER,
-        pass: process.env.SMTP_PASS,
+        user: process.env.EMAIL_SERVER_USER,
+        pass: process.env.EMAIL_SERVER_PASSWORD,
       },
     })
 
+    // Verify transporter configuration
+    await transporter.verify()
+
     // Email to you
     await transporter.sendMail({
-      from: process.env.SMTP_USER,
+      from: process.env.EMAIL_FROM,
       to: "vincentotienoakuku@gmail.com",
       subject: `Portfolio Contact: ${subject}`,
       html: `
@@ -33,7 +58,7 @@ export async function POST(request: NextRequest) {
 
     // Auto-reply to sender
     await transporter.sendMail({
-      from: process.env.SMTP_USER,
+      from: process.env.EMAIL_FROM,
       to: email,
       subject: "Thank you for contacting Vincent Otieno",
       html: `
@@ -47,6 +72,26 @@ export async function POST(request: NextRequest) {
     return NextResponse.json({ message: "Email sent successfully" })
   } catch (error) {
     console.error("Error sending email:", error)
-    return NextResponse.json({ error: "Failed to send email" }, { status: 500 })
+    
+    // Provide more specific error messages
+    if (error instanceof Error) {
+      if (error.message.includes("Invalid login")) {
+        return NextResponse.json(
+          { error: "Email authentication failed. Please check your credentials." },
+          { status: 500 }
+        )
+      }
+      if (error.message.includes("ENOTFOUND")) {
+        return NextResponse.json(
+          { error: "Email server not found. Please check your configuration." },
+          { status: 500 }
+        )
+      }
+    }
+    
+    return NextResponse.json(
+      { error: "Failed to send email. Please try again later." },
+      { status: 500 }
+    )
   }
 }
