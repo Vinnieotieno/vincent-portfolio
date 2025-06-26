@@ -16,7 +16,7 @@ const Skills = () => {
     },
     {
       title: "Backend Development",
-      skills: ["Node.js","Python", "Django"],
+      skills: ["Node.js","Python", "Django", "PHP"],
     },
     {
       title: "Database",
@@ -41,7 +41,7 @@ const Skills = () => {
     { skill: "JavaScript/TypeScript", level: 80 },
     { skill: "Digital Marketing", level: 80 },
     { skill: "SEO Optimization", level: 85 },
-    { skill: "Node.js/Backend", level: 50 },
+    { skill: "Node.js/Backend", level: 45 },
     { skill: "Database Management", level: 75 },
   ]
 

@@ -25,7 +25,7 @@ const Projects = () => {
       image: "/project-images/bigdrop-screenshot.jpg",
       technologies: ["WordPress", "WooCommerce", "PHP", "MySQL", "JavaScript"],
       liveUrl: "https://bigdrop.co.ke",
-      githubUrl: "https://github.com/vincentotieno/bigdrop",
+      githubUrl: "https://github.com/Vinnieotieno/bigdrop-ecommerce",
       featured: true,
     },
     {
@@ -35,10 +35,10 @@ const Projects = () => {
         "Modern corporate website for Globeflight Kenya with focus on logistics and courier services.",
       longDescription:
         "A professional corporate website for Globeflight Kenya, a leading logistics and courier services company. The site features modern design, service showcases, tracking functionality, and contact management. Built with React frontend and Node.js/Express/PostgreSQL backend for optimal user experience and performance.",
-      image: "/project-images/globeflight-screenshot.jpg",
+      image: "/project-images/globeflight-screenshot.png",
       technologies: ["React", "Node.js", "Express", "PostgreSQL", "JavaScript"],
       liveUrl: "https://globeflight.co.ke",
-      githubUrl: "https://github.com/vincentotieno/globeflight",
+      githubUrl: "https://github.com/Vinnieotieno/Globeflight-Kenya",
       featured: true,
     },
     {
@@ -51,7 +51,7 @@ const Projects = () => {
       image: "/project-images/lead-africa-screenshot.jpg",
       technologies: ["Next.js", "TypeScript", "JavaScript", "HTML5", "CSS3"],
       liveUrl: "https://leadfoundationafrica.org",
-      githubUrl: "https://github.com/vincentotieno/lead-foundation",
+      githubUrl: "https://github.com/Vinnieotieno/leadfoundation",
       featured: false,
     },
     {
@@ -64,7 +64,7 @@ const Projects = () => {
       image: "/project-images/zewan-screenshot.jpg",
       technologies: ["Next.js", "React", "TypeScript", "Tailwind CSS", "Framer Motion"],
       liveUrl: "https://zewan.vercel.app",
-      githubUrl: "https://github.com/vincentotieno/zewan-construction",
+      githubUrl: "https://github.com/Vinnieotieno/zewan",
       featured: false,
     },
   ]
@@ -218,6 +218,19 @@ const Projects = () => {
                 </div>
               </motion.div>
             ))}
+        </div>
+
+        {/* View More Of My Projects Button */}
+        <div className="flex justify-center mt-8">
+          <a
+            href="https://github.com/vincentotieno"
+            target="_blank"
+            rel="noopener noreferrer"
+            className="inline-flex items-center space-x-2 px-8 py-4 text-lg font-semibold bg-gradient-to-r from-blue-600 to-purple-600 text-white rounded-2xl shadow-lg hover:from-blue-700 hover:to-purple-700 transition-all duration-300"
+          >
+            <Github size={24} />
+            <span>View More Of My Projects</span>
+          </a>
         </div>
 
         {/* Other Projects */}
