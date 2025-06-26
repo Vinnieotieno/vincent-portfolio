@@ -6,7 +6,6 @@ const MEDIUM_RSS = 'https://medium.com/feed/@vincentotienoakuku'
 // Function to generate placeholder image based on title and categories
 function generatePlaceholderImage(title: string, categories: string[] = []) {
   const encodedTitle = encodeURIComponent(title)
-  const category = categories.length > 0 ? categories[0] : 'technology'
   const colors = ['1f2937', '3b82f6', '8b5cf6', '06b6d4', '10b981', 'f59e0b', 'ef4444']
   const randomColor = colors[Math.floor(Math.random() * colors.length)]
   
@@ -34,7 +33,7 @@ export async function GET(req: NextRequest) {
 
   try {
     const feed = await parser.parseURL(MEDIUM_RSS)
-    let items = feed.items || []
+    const items = feed.items || []
 
     // Map to a simpler structure with image extraction
     const posts = items.map(item => {
