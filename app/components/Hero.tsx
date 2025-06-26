@@ -76,7 +76,7 @@ const Hero = () => {
                     transition={{ type: "spring", stiffness: 300 }}
                   >
                     <Image
-                      src="/vincent.jpg"
+                      src="/vincent.webp"
                       alt="Vincent Otieno - Software Developer"
                       width={580}
                       height={700}
@@ -375,7 +375,7 @@ const Hero = () => {
                     transition={{ type: "spring", stiffness: 300 }}
                   >
                     <Image
-                      src="/vincent.jpg"
+                      src="/vincent.webp"
                       alt="Vincent Otieno - Software Developer"
                       width={640}
                       height={760}
