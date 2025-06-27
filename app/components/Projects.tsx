@@ -25,7 +25,7 @@ const Projects = () => {
       image: "/project-images/bigdrop-screenshot.jpg",
       technologies: ["WordPress", "WooCommerce", "PHP", "MySQL", "JavaScript"],
       liveUrl: "https://bigdrop.co.ke",
-      githubUrl: "https://github.com/Vinnieotieno/bigdrop-ecommerce",
+      githubUrl: "https://github.com/Vinnieotieno/bigdropecommerce",
       featured: true,
     },
     {
@@ -84,38 +84,38 @@ const Projects = () => {
         className="bg-white p-8 rounded-2xl max-w-4xl w-full max-h-[90vh] overflow-y-auto shadow-2xl border border-gray-100"
         onClick={(e) => e.stopPropagation()}
       >
-        <div className="flex justify-between items-start mb-6">
+        <div className="flex items-start justify-between mb-6">
           <h3 className="text-2xl font-bold text-blue-700">{project.title}</h3>
-          <button onClick={onClose} className="text-gray-400 hover:text-blue-600 transition-colors text-2xl font-bold">
+          <button onClick={onClose} className="text-2xl font-bold text-gray-400 transition-colors hover:text-blue-600">
             ✕
           </button>
         </div>
-        <div className="grid md:grid-cols-2 gap-8">
+        <div className="grid gap-8 md:grid-cols-2">
           <div>
             <ProfileImage
               src={project.image}
               alt={project.title}
               width={600}
               height={400}
-              className="w-full h-64 object-cover rounded-xl mb-4"
+              className="object-cover w-full h-64 mb-4 rounded-xl"
               sizes="(max-width: 768px) 100vw, 50vw"
             />
             <div className="flex flex-wrap gap-2 mb-4">
               {project.technologies.map((tech) => (
-                <span key={tech} className="px-3 py-1 bg-gray-100 text-gray-800 rounded-full text-xs font-medium shadow-sm">
+                <span key={tech} className="px-3 py-1 text-xs font-medium text-gray-800 bg-gray-100 rounded-full shadow-sm">
                   {tech}
                 </span>
               ))}
             </div>
           </div>
           <div>
-            <p className="text-gray-800 mb-6 leading-relaxed">{project.longDescription}</p>
+            <p className="mb-6 leading-relaxed text-gray-800">{project.longDescription}</p>
             <div className="flex gap-4">
               <a
                 href={project.liveUrl}
                 target="_blank"
                 rel="noopener noreferrer"
-                className="flex items-center space-x-2 px-6 py-3 bg-gradient-to-r from-blue-600 to-purple-600 text-white rounded-lg font-semibold shadow hover:from-blue-700 hover:to-purple-700 transition-colors"
+                className="flex items-center px-6 py-3 space-x-2 font-semibold text-white transition-colors rounded-lg shadow bg-gradient-to-r from-blue-600 to-purple-600 hover:from-blue-700 hover:to-purple-700"
               >
                 <ExternalLink size={16} />
                 <span>Live Demo</span>
@@ -124,7 +124,7 @@ const Projects = () => {
                 href={project.githubUrl}
                 target="_blank"
                 rel="noopener noreferrer"
-                className="flex items-center space-x-2 px-6 py-3 bg-white border border-blue-600 text-blue-600 rounded-lg font-semibold shadow hover:bg-blue-50 transition-colors"
+                className="flex items-center px-6 py-3 space-x-2 font-semibold text-blue-600 transition-colors bg-white border border-blue-600 rounded-lg shadow hover:bg-blue-50"
               >
                 <Github size={16} />
                 <span>Code</span>
@@ -137,22 +137,22 @@ const Projects = () => {
   )
 
   return (
-    <section id="projects" className="py-20 relative bg-white">
-      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+    <section id="projects" className="relative py-20 bg-white">
+      <div className="px-4 mx-auto max-w-7xl sm:px-6 lg:px-8">
         <motion.div
           ref={ref}
           initial={{ opacity: 0, y: 50 }}
           animate={inView ? { opacity: 1, y: 0 } : {}}
           transition={{ duration: 0.8 }}
-          className="text-center mb-16"
+          className="mb-16 text-center"
         >
-          <h2 className="text-4xl lg:text-5xl font-bold text-gradient mb-6">Featured Projects</h2>
-          <p className="text-xl text-gray-800 max-w-3xl mx-auto">
+          <h2 className="mb-6 text-4xl font-bold lg:text-5xl text-gradient">Featured Projects</h2>
+          <p className="max-w-3xl mx-auto text-xl text-gray-800">
             A showcase of my recent work in web development, e-commerce, and digital solutions
           </p>
         </motion.div>
 
-        <div className="grid lg:grid-cols-2 gap-8 mb-12">
+        <div className="grid gap-8 mb-12 lg:grid-cols-2">
           {projects
             .filter((p) => p.featured)
             .map((project, index) => (
@@ -161,23 +161,23 @@ const Projects = () => {
                 initial={{ opacity: 0, y: 50 }}
                 animate={inView ? { opacity: 1, y: 0 } : {}}
                 transition={{ duration: 0.6, delay: index * 0.2 }}
-                className="bg-white rounded-2xl shadow-lg p-8 flex flex-col group border border-gray-100 hover:shadow-2xl transition-shadow duration-300"
+                className="flex flex-col p-8 transition-shadow duration-300 bg-white border border-gray-100 shadow-lg rounded-2xl group hover:shadow-2xl"
               >
-                <div className="relative overflow-hidden rounded-xl mb-6">
+                <div className="relative mb-6 overflow-hidden rounded-xl">
                   <ProfileImage
                     src={project.image}
                     alt={project.title}
                     width={600}
                     height={400}
-                    className="w-full h-64 object-cover transition-transform duration-300 group-hover:scale-105 rounded-xl"
+                    className="object-cover w-full h-64 transition-transform duration-300 group-hover:scale-105 rounded-xl"
                     sizes="(max-width: 768px) 100vw, 50vw"
                   />
-                  <div className="absolute inset-0 bg-black/40 opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex items-center justify-center">
+                  <div className="absolute inset-0 flex items-center justify-center transition-opacity duration-300 opacity-0 bg-black/40 group-hover:opacity-100">
                     <motion.button
                       onClick={() => setSelectedProject(project.id)}
                       whileHover={{ scale: 1.1 }}
                       whileTap={{ scale: 0.9 }}
-                      className="flex items-center space-x-2 px-4 py-2 bg-white text-blue-600 rounded-lg shadow hover:bg-blue-50 transition-colors"
+                      className="flex items-center px-4 py-2 space-x-2 text-blue-600 transition-colors bg-white rounded-lg shadow hover:bg-blue-50"
                     >
                       <Eye size={16} />
                       <span>View Details</span>
@@ -185,12 +185,12 @@ const Projects = () => {
                   </div>
                 </div>
 
-                <h3 className="text-xl font-bold mb-3 text-gray-900 group-hover:text-blue-700 transition-colors">{project.title}</h3>
-                <p className="text-gray-800 mb-4">{project.description}</p>
+                <h3 className="mb-3 text-xl font-bold text-gray-900 transition-colors group-hover:text-blue-700">{project.title}</h3>
+                <p className="mb-4 text-gray-800">{project.description}</p>
 
                 <div className="flex flex-wrap gap-2 mb-6">
                   {project.technologies.map((tech) => (
-                    <span key={tech} className="px-3 py-1 bg-gray-100 text-gray-800 rounded-full text-xs font-medium shadow-sm">
+                    <span key={tech} className="px-3 py-1 text-xs font-medium text-gray-800 bg-gray-100 rounded-full shadow-sm">
                       {tech}
                     </span>
                   ))}
@@ -201,7 +201,7 @@ const Projects = () => {
                     href={project.liveUrl}
                     target="_blank"
                     rel="noopener noreferrer"
-                    className="flex items-center space-x-2 px-6 py-3 bg-gradient-to-r from-blue-600 to-purple-600 text-white rounded-lg font-semibold shadow hover:from-blue-700 hover:to-purple-700 transition-colors"
+                    className="flex items-center px-6 py-3 space-x-2 font-semibold text-white transition-colors rounded-lg shadow bg-gradient-to-r from-blue-600 to-purple-600 hover:from-blue-700 hover:to-purple-700"
                   >
                     <ExternalLink size={16} />
                     <span>Live Demo</span>
@@ -210,7 +210,7 @@ const Projects = () => {
                     href={project.githubUrl}
                     target="_blank"
                     rel="noopener noreferrer"
-                    className="flex items-center space-x-2 px-6 py-3 bg-white border border-blue-600 text-blue-600 rounded-lg font-semibold shadow hover:bg-blue-50 transition-colors"
+                    className="flex items-center px-6 py-3 space-x-2 font-semibold text-blue-600 transition-colors bg-white border border-blue-600 rounded-lg shadow hover:bg-blue-50"
                   >
                     <Github size={16} />
                     <span>Code</span>
@@ -226,7 +226,7 @@ const Projects = () => {
             href="https://github.com/vincentotieno"
             target="_blank"
             rel="noopener noreferrer"
-            className="inline-flex items-center space-x-2 px-8 py-4 text-lg font-semibold bg-gradient-to-r from-blue-600 to-purple-600 text-white rounded-2xl shadow-lg hover:from-blue-700 hover:to-purple-700 transition-all duration-300"
+            className="inline-flex items-center px-8 py-4 space-x-2 text-lg font-semibold text-white transition-all duration-300 shadow-lg bg-gradient-to-r from-blue-600 to-purple-600 rounded-2xl hover:from-blue-700 hover:to-purple-700"
           >
             <Github size={24} />
             <span>View More Of My Projects</span>
@@ -238,12 +238,12 @@ const Projects = () => {
           initial={{ opacity: 0, y: 50 }}
           animate={inView ? { opacity: 1, y: 0 } : {}}
           transition={{ duration: 0.8, delay: 0.6 }}
-          className="text-center mb-8"
+          className="mb-8 text-center"
         >
-          <h3 className="text-2xl font-bold text-gradient mb-4">Other Projects</h3>
+          <h3 className="mb-4 text-2xl font-bold text-gradient">Other Projects</h3>
         </motion.div>
 
-        <div className="grid md:grid-cols-2 gap-6">
+        <div className="grid gap-6 md:grid-cols-2">
           {projects
             .filter((p) => !p.featured)
             .map((project, index) => (
@@ -252,21 +252,21 @@ const Projects = () => {
                 initial={{ opacity: 0, y: 30 }}
                 animate={inView ? { opacity: 1, y: 0 } : {}}
                 transition={{ duration: 0.6, delay: 0.8 + index * 0.1 }}
-                className="glass p-6 rounded-xl glass-hover group cursor-pointer"
+                className="p-6 cursor-pointer glass rounded-xl glass-hover group"
                 onClick={() => setSelectedProject(project.id)}
               >
-                <h4 className="text-lg font-semibold mb-2 text-gradient group-hover:scale-105 transition-transform">
+                <h4 className="mb-2 text-lg font-semibold transition-transform text-gradient group-hover:scale-105">
                   {project.title}
                 </h4>
-                <p className="text-gray-800 mb-4">{project.description}</p>
+                <p className="mb-4 text-gray-800">{project.description}</p>
                 <div className="flex flex-wrap gap-2">
                   {project.technologies.slice(0, 3).map((tech) => (
-                    <span key={tech} className="px-2 py-1 glass rounded text-xs">
+                    <span key={tech} className="px-2 py-1 text-xs rounded glass">
                       {tech}
                     </span>
                   ))}
                   {project.technologies.length > 3 && (
-                    <span className="px-2 py-1 glass rounded text-xs">+{project.technologies.length - 3} more</span>
+                    <span className="px-2 py-1 text-xs rounded glass">+{project.technologies.length - 3} more</span>
                   )}
                 </div>
               </motion.div>
