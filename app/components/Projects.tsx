@@ -223,7 +223,7 @@ const Projects = () => {
         {/* View More Of My Projects Button */}
         <div className="flex justify-center mt-8">
           <a
-            href="https://github.com/vincentotieno"
+            href="https://github.com/Vinnieotieno"
             target="_blank"
             rel="noopener noreferrer"
             className="inline-flex items-center px-8 py-4 space-x-2 text-lg font-semibold text-white transition-all duration-300 shadow-lg bg-gradient-to-r from-blue-600 to-purple-600 rounded-2xl hover:from-blue-700 hover:to-purple-700"
