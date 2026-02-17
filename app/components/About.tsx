@@ -12,25 +12,39 @@ const About = () => {
 
   const experiences = [
     {
-      title: "Website Developer and Digital Strategist",
-      company: "Lead Foundation Africa",
-      period: "January 2025–Present",
+      title: "Software Developer",
+      company: "Globeflight Worldwide Express, Nairobi, Kenya",
+      period: "April 2024 - Current",
       description:
-        "Designed, developed, and maintained websites. Developed and implemented digital strategies to improve visibility and outreach.",
+        "Engineered an enterprise CRM using the MERN stack with GraphQL and Apollo Client for Sales quote generation and Operations shipment updates, including document management with role-based access. Built responsive Material-UI admin dashboards, implemented WebSocket real-time notifications, GPS auto-geocoding, and proof-of-delivery photo capture. Delivered measurable impact with reduced shipment inquiries, increased customer satisfaction, and 200+ daily active users.",
     },
     {
-      title: "Lead Digital Marketing/Systems Operations",
-      company: "Globeflight Worldwide Express/Partnership with Savabuy",
-      period: "February 2024–September 2024",
+      title: "Frontend Developer (React & Vue.js)",
+      company: "JP Innovate Remote, London, United Kingdom",
+      period: "June 2025 - December 2025",
       description:
-        "Leading digital marketing strategies, managing SEO initiatives, overseeing social media campaigns, and maintaining system operations.",
+        "Developed a responsive enterprise admin dashboard using React.js and Vue.js for a multi-tenant employee management platform. Built complex UI workflows for salary advance processes, multi-stage approvals, and document management, and implemented dynamic routing with permission-based navigation. Integrated REST APIs from .NET microservices and delivered real-time dashboard/reporting interfaces with strong CI/CD collaboration.",
     },
     {
-      title: "Website Developer/IT Support Assistant (Freelance)",
-      company: "Globeflight Worldwide Express",
-      period: "September 2023–January 2024",
+      title: "Digital Strategist",
+      company: "Lead Foundation Africa, Nairobi, Kenya",
+      period: "January 2025 - June 2025",
       description:
-        "Developed eCommerce platforms enabling vendors to upload products and clients to shop online. Maintained company websites and provided IT support.",
+        "Led digital strategy initiatives and managed the organization's full digital footprint across web and online channels. Administered the digital literacy program and coordinated content, visibility, and engagement efforts to support program goals and outreach impact.",
+    },
+    {
+      title: "Frontend Engineer (Contract)",
+      company: "Savabuy China - Globeflight Worldwide Express Partnership, Nairobi, Kenya",
+      period: "December 2023 - March 2024",
+      description:
+        "Contributed to frontend development for a China-Africa eCommerce platform serving 10,000+ active users across multiple African countries using React.js. Implemented responsive, cross-browser, mobile-first UI components and collaborated on REST API integrations, performance optimization, and checkout/catalog features. Collected and documented user feedback to improve usability for the Kenyan market.",
+    },
+    {
+      title: "IT Intern",
+      company: "Globeflight Worldwide Express, Nairobi, Kenya",
+      period: "May 2023 - September 2023",
+      description:
+        "Contributed to a multi-vendor eCommerce platform enabling vendor product management and checkout flows processing 100+ monthly orders. Supported maintenance and updates of the Warehouse Management System and improved reliability by helping migrate services to better hosting providers. Monitored updates, backups, and system performance.",
     },
   ]
 
@@ -46,9 +60,10 @@ const About = () => {
         >
           <h2 className="mb-6 text-4xl font-bold lg:text-5xl text-gradient">About Me</h2>
           <p className="max-w-3xl mx-auto text-xl text-gray-800">
-            I am a Frontend developer with expertise in React frontend development  with a key eye in designing and giving user look and feel, and project management. Proven
-            ability to deliver innovative solutions, improve efficiency, and drive project success. Skilled also in
-            digital strategy, including SEO and social media management.
+            I am a Software Engineer specializing in frontend and full-stack development, focused on building
+            responsive, high-performance web applications using React.js, Vue.js, and modern JavaScript/TypeScript
+            technologies. I transform complex business requirements into scalable, user-centric interfaces and deliver
+            production-ready systems with GraphQL APIs, real-time features, and performance optimization.
           </p>
         </motion.div>
 

@@ -2,6 +2,11 @@ import { NextRequest, NextResponse } from 'next/server'
 import Parser from 'rss-parser'
 
 const MEDIUM_RSS = 'https://medium.com/feed/@vincentotienoakuku'
+const DEFAULT_PAGE = 1
+const DEFAULT_LIMIT = 6
+const MAX_LIMIT = 20
+
+export const revalidate = 3600
 
 // Function to generate placeholder image based on title and categories
 function generatePlaceholderImage(title: string, categories: string[] = []) {
@@ -26,8 +31,10 @@ export async function GET(req: NextRequest) {
 
   // Pagination params
   const { searchParams } = new URL(req.url)
-  const page = parseInt(searchParams.get('page') || '1', 10)
-  const limit = parseInt(searchParams.get('limit') || '6', 10)
+  const rawPage = parseInt(searchParams.get('page') || `${DEFAULT_PAGE}`, 10)
+  const rawLimit = parseInt(searchParams.get('limit') || `${DEFAULT_LIMIT}`, 10)
+  const page = Number.isNaN(rawPage) || rawPage < 1 ? DEFAULT_PAGE : rawPage
+  const limit = Number.isNaN(rawLimit) || rawLimit < 1 ? DEFAULT_LIMIT : Math.min(rawLimit, MAX_LIMIT)
   const start = (page - 1) * limit
   const end = start + limit
 
@@ -108,8 +115,23 @@ export async function GET(req: NextRequest) {
     })
     const total = posts.length
     const pagedPosts = posts.slice(start, end)
-    return NextResponse.json({ posts: pagedPosts, total, page, limit })
+    return NextResponse.json(
+      { posts: pagedPosts, total, page, limit },
+      {
+        headers: {
+          'Cache-Control': 'public, s-maxage=3600, stale-while-revalidate=86400',
+        },
+      }
+    )
   } catch (error: any) {
-    return NextResponse.json({ posts: [], total: 0, page, limit, error: error?.message || 'Unknown error' })
+    return NextResponse.json(
+      { posts: [], total: 0, page, limit, error: error?.message || 'Unknown error' },
+      {
+        status: 502,
+        headers: {
+          'Cache-Control': 'public, s-maxage=300, stale-while-revalidate=3600',
+        },
+      }
+    )
   }
 } 

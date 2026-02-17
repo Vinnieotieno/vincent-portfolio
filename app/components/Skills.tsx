@@ -12,37 +12,33 @@ const Skills = () => {
   const skillCategories = [
     {
       title: "Frontend Development",
-      skills: ["ReactJS", "NextJS", "VueJS", "JavaScript", "TypeScript", "Tailwind CSS"],
+      skills: ["React.js (Hooks, Context, Lifecycle)", "Vue.js", "JavaScript (ES6+)", "TypeScript", "TailwindCSS", "Material-UI", "Bootstrap"],
     },
     {
       title: "Backend Development",
-      skills: ["Node.js","Python", "Django", "PHP"],
+      skills: ["Node.js", "Express.js", "Django", "Spring Boot", "Java", "PHP", "GraphQL APIs", "Apollo Client", "RESTful APIs"],
     },
     {
       title: "Database",
-      skills: ["MongoDB", "PostgreSQL", "MySQL"],
+      skills: ["MongoDB", "PostgreSQL", "SQL"],
     },
     {
       title: "Tools & Technologies",
-      skills: ["Git", "Docker", "WordPress", "Vercel", "Netlify"],
+      skills: ["Git", "Docker", "Azure DevOps", "CI/CD Pipelines", "Grafana", "Swagger", "Jira", "Confluence", "WordPress", "WooCommerce", "Elementor"],
     },
     {
-      title: "SEO & Analytics",
-      skills: ["Google Analytics", "Google Console", "SEMrush", "Moz", "Page Speed"],
-    },
-    {
-      title: "Digital Marketing",
-      skills: ["Social Media Management", "Content Strategy", "HubSpot", "Email Marketing", "PPC Advertising"],
+      title: "Real-Time & Architecture",
+      skills: ["WebSocket Real-time Features", "Google Maps API Integration", "Role-Based Access", "Responsive Design", "Agile Scrum with Kanban"],
     },
   ]
 
   const proficiency = [
-    { skill: "React/Next.js", level: 90 },
-    { skill: "JavaScript/TypeScript", level: 80 },
-    { skill: "Digital Marketing", level: 80 },
-    { skill: "SEO Optimization", level: 85 },
-    { skill: "Node.js/Backend", level: 45 },
-    { skill: "Database Management", level: 75 },
+    { skill: "React.js / Vue.js / TypeScript", level: 92 },
+    { skill: "JavaScript (ES6+) / UI Architecture", level: 90 },
+    { skill: "GraphQL / Apollo Client", level: 88 },
+    { skill: "Node.js / Express.js / Spring Boot", level: 82 },
+    { skill: "WebSocket Real-Time Features", level: 86 },
+    { skill: "MongoDB / PostgreSQL / SQL", level: 84 },
   ]
 
   return (

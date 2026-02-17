@@ -1,6 +1,8 @@
 /** @type {import('next').NextConfig} */
 const nextConfig = {
-  reactStrictMode: false,
+  reactStrictMode: true,
+  poweredByHeader: false,
+  compress: true,
   transpilePackages: ['three', '@react-three/fiber', '@react-three/drei'],
   webpack: (config, { isServer }) => {
     // Ensure proper module resolution
@@ -24,7 +26,13 @@ const nextConfig = {
   },
   // Remove experimental features that might cause issues
   images: {
-    domains: [],
+    formats: ['image/avif', 'image/webp'],
+    minimumCacheTTL: 60,
+    remotePatterns: [
+      { protocol: 'https', hostname: 'miro.medium.com' },
+      { protocol: 'https', hostname: 'cdn-images-1.medium.com' },
+      { protocol: 'https', hostname: 'via.placeholder.com' },
+    ],
   },
 }
 

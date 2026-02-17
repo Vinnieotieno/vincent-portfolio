@@ -25,7 +25,7 @@ const ProfileImage = ({
       alt={alt}
       width={width}
       height={height}
-      className={`object-cover object-center ${className}`}
+      className={className}
       priority={priority}
       sizes={sizes}
     />

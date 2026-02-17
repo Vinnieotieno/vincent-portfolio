@@ -17,55 +17,107 @@ const Projects = () => {
   const projects = [
     {
       id: 1,
-      title: "BigDrop E-commerce Platform",
+      title: "Enterprise CRM Platform",
       description:
-        "A comprehensive e-commerce platform enabling vendors to upload products and clients to shop online. Built with modern web technologies for optimal performance.",
+        "Comprehensive logistics CRM that manages the full order lifecycle from quote creation to final delivery across 7 coordinated departments.",
       longDescription:
-        "BigDrop is a full-featured e-commerce platform that I developed for online shopping in Kenya. The platform features vendor management, product catalog, shopping cart functionality, payment integration, and admin dashboard. Built with WordPress/WooCommerce for scalability and performance, it provides a complete solution for online retail operations.",
-      image: "/project-images/bigdrop-screenshot.jpg",
-      technologies: ["WordPress", "WooCommerce", "PHP", "MySQL", "JavaScript"],
-      liveUrl: "https://bigdrop.co.ke",
-      githubUrl: "https://github.com/Vinnieotieno/bigdropecommerce",
+        "Designed and built an enterprise Employee Dashboard/CRM for logistics and freight operations to solve fragmented processes, poor visibility, and delayed cross-team coordination. The platform connects Sales, Management, Operations, Finance, Warehouse, Delivery, and Customer Care in one workflow system and drives a structured 6-stage progression: Collected, On Transit, Arrived, Clearance, Delivery, and Delivered. It supports quote-to-delivery execution with approvals, role-based access, real-time status updates, ETA confidence tracking, document management, customs and expense tracking, proof-of-delivery capture, and department reporting. This gave teams clear handoffs, faster decision-making, improved customer communication, and stronger financial control from order creation to closure.",
+      image: "/enterprise-crm.png",
+      technologies: ["React.js", "Node.js", "Express.js", "GraphQL", "Apollo Client", "PostgreSQL", "Socket.IO", "JWT", "Nodemailer"],
+      liveUrl: "https://globeflight.co.ke",
+      githubUrl: "https://github.com/Vinnieotieno/DashboardApi",
       featured: true,
     },
     {
       id: 2,
-      title: "Globeflight Kenya Website",
+      title: "Real-Time Shipment Tracking Platform",
       description:
-        "Modern corporate website for Globeflight Kenya with focus on logistics and courier services.",
+        "End-to-end shipment tracking system that replaced manual follow-ups with real-time visibility, automated notifications, and proof-of-delivery tracking.",
       longDescription:
-        "A professional corporate website for Globeflight Kenya, a leading logistics and courier services company. The site features modern design, service showcases, tracking functionality, and contact management. Built with React frontend and Node.js/Express/PostgreSQL backend for optimal user experience and performance.",
-      image: "/project-images/globeflight-screenshot.png",
-      technologies: ["React", "Node.js", "Express", "PostgreSQL", "JavaScript"],
-      liveUrl: "https://globeflight.co.ke",
-      githubUrl: "https://github.com/Vinnieotieno/Globeflight-Kenya",
+        "Built and deployed a real-time shipment tracking platform for Globeflight Kenya to solve manual tracking, poor transparency, and repeated customer inquiries. The system provides unique tracking number generation, GPS map-based tracking, timeline updates, automated email notifications, proof-of-delivery capture, and exception management. Role-based access supports Superadmin, Admin, Staff, and Public tracking users, while the public page enables 24/7 tracking and waybill access without login. Technically, the solution uses React.js frontends, Node.js/Express APIs, PostgreSQL, Socket.IO real-time updates, JWT authentication, Nodemailer notifications, and geocoding integrations for location intelligence.",
+      image: "/realtime-tracking.png",
+      technologies: ["React.js", "Material-UI", "Node.js", "Express.js", "PostgreSQL", "Socket.IO", "JWT", "Nodemailer", "Google Maps API"],
+      liveUrl: "https://globeflight.co.ke/track",
+      githubUrl: "https://github.com/Vinnieotieno/logistics-backend",
       featured: true,
     },
     {
       id: 3,
-      title: "LEAD Foundation Africa Website",
+      title: "Savabuy China-Africa eCommerce",
       description:
-        "Modern, responsive website for LEAD Foundation Africa with focus on digital strategy and user engagement.",
+        "Cross-border eCommerce frontend supporting 10,000+ active users with responsive, mobile-first shopping experiences.",
       longDescription:
-        "A comprehensive website for LEAD Foundation Africa featuring modern design, content management system, donation integration, and SEO optimization. Built with Next.js, TypeScript, and modern web technologies for optimal performance and user experience. The site showcases mental health initiatives, community development programs, and youth empowerment across Africa.",
-      image: "/project-images/lead-africa-screenshot.jpg",
-      technologies: ["Next.js", "TypeScript", "JavaScript", "HTML5", "CSS3"],
-      liveUrl: "https://leadfoundationafrica.org",
-      githubUrl: "https://github.com/Vinnieotieno/leadfoundation",
-      featured: false,
+        "Contributed to frontend engineering for a large eCommerce platform used across multiple African countries. Implemented responsive UI components, improved checkout and product catalog flows, and collaborated on REST API integration and performance optimization to support scale and reliability.",
+      image: "/savabuy-ecommerce.png",
+      technologies: ["React.js", "JavaScript", "Spring Boot", "REST APIs", "Responsive Design", "Performance Optimization"],
+      liveUrl: "https://savabuy.com",
+      githubUrl: "https://github.com/Vinnieotieno",
+      featured: true,
     },
     {
       id: 4,
-      title: "Zewan Construction Website",
+      title: "Multi-Tenant Employee Management Dashboard",
       description:
-        "Professional construction company website with modern design and comprehensive service showcase.",
+        "Enterprise admin dashboard with role-based routes and workflow automation for salary advance and approvals.",
       longDescription:
-        "A cutting-edge website for Zewan Construction featuring modern design, service showcases, project portfolios, and client testimonials. Built with Next.js and modern web technologies, the site showcases construction services including custom home building, renovations, and commercial projects.",
-      image: "/project-images/zewan-screenshot.jpg",
-      technologies: ["Next.js", "React", "TypeScript", "Tailwind CSS", "Framer Motion"],
-      liveUrl: "https://zewan.vercel.app",
-      githubUrl: "https://github.com/Vinnieotieno/zewan",
+        "Built complex frontend interfaces for a multi-tenancy employee management platform using React.js and Vue.js. Implemented reusable permission-based navigation, multi-stage approval pipelines, and document workflows while integrating RESTful .NET microservice APIs for real-time dashboards and reporting.",
+      image: "/project-images/multitenant-dashboard.png",
+      technologies: ["React.js", "Vue.js", "Material-UI", "RESTful APIs", ".NET Microservices", "CI/CD"],
+      liveUrl: "https://github.com/Vinnieotieno",
+      githubUrl: "https://github.com/Vinnieotieno",
       featured: false,
+    },
+    {
+      id: 5,
+      title: "BigDrop Multi-Vendor eCommerce",
+      description:
+        "Multi-vendor commerce platform enabling product listing, checkout, and vendor management workflows.",
+      longDescription:
+        "Contributed to development of a multi-vendor eCommerce platform that supported monthly order operations and improved reliability through hosting and infrastructure optimization. Worked on vendor product management and checkout experiences as part of broader platform enhancements.",
+      image: "/project-images/bigdrop-multivendor.png",
+      technologies: ["PHP", "WordPress", "WooCommerce", "CSS", "JavaScript", "SQL", "Elementor"],
+      liveUrl: "https://bigdrop.co.ke",
+      githubUrl: "https://github.com/Vinnieotieno/bigdropecommerce",
+      featured: false,
+    },
+    {
+      id: 6,
+      title: "Globeflight Corporate Website",
+      description:
+        "Corporate web presence for logistics and courier services with improved content structure and responsiveness.",
+      longDescription:
+        "Built and maintained a modern company website for logistics operations, supporting service showcase, better discoverability, and cleaner customer journey paths. Focused on responsive design, performance, and practical content architecture for business users.",
+      image: "/project-images/globeflight-website.png",
+      technologies: ["React.js", "TailwindCSS", "Node.js", "Express.js", "PostgreSQL"],
+      liveUrl: "https://globeflight.co.ke",
+      githubUrl: "https://github.com/Vinnieotieno",
+      featured: false,
+    },
+    {
+      id: 7,
+      title: "Movie Recommendation Application",
+      description:
+        "Full-stack movie recommendation app with Django/Python backend, TypeScript frontend, and production-ready API documentation.",
+      longDescription:
+        "Built a movie recommendation platform with a Django/Python backend and a TypeScript + Tailwind CSS frontend to deliver a clean, fast user experience. Implemented PostgreSQL for reliable data management and integrated Swagger documentation for clear API exploration and testing. The architecture separates frontend and backend services for easier scaling and maintenance.",
+      image: "/movie.png",
+      technologies: ["Django", "Python", "TypeScript", "Tailwind CSS", "PostgreSQL", "Swagger"],
+      liveUrl: "https://www.loom.com/share/5803334ae2cc460d8bdf608ab4a62ff5",
+      githubUrl: "https://github.com/Vinnieotieno/Movie_recommendation_app",
+      featured: false,
+    },
+    {
+      id: 8,
+      title: "Vincent RealEstate Solutions",
+      description:
+        "Modern, responsive real estate platform built with Django, focused on premium UX, advanced search, and end-to-end listing management.",
+      longDescription:
+        "Built a visually rich and fully responsive real estate web platform for buyers, sellers, and renters with a strong focus on branding and usability. Implemented a modern glassmorphic UI, featured listing cards, advanced search filters (keywords, city, bedrooms, price), single-property pages, user authentication flows, a contact experience, SEO metadata, social previews, and a WhatsApp support widget. The platform also includes admin management for listings, realtors, and inquiries, backed by PostgreSQL and configurable SMTP email support.",
+      image: "/realestate.png",
+      technologies: ["Django 4.x", "Bootstrap 5", "Custom CSS", "PostgreSQL", "Gmail SMTP", "FontAwesome", "Lightbox.js"],
+      liveUrl: "https://github.com/Vinnieotieno/RealEstate",
+      githubUrl: "https://github.com/Vinnieotieno/RealEstate",
+      featured: true,
     },
   ]
 
@@ -97,7 +149,7 @@ const Projects = () => {
               alt={project.title}
               width={600}
               height={400}
-              className="object-cover w-full h-64 mb-4 rounded-xl"
+              className="object-contain w-full h-64 mb-4 rounded-xl bg-gray-50"
               sizes="(max-width: 768px) 100vw, 50vw"
             />
             <div className="flex flex-wrap gap-2 mb-4">
@@ -148,7 +200,7 @@ const Projects = () => {
         >
           <h2 className="mb-6 text-4xl font-bold lg:text-5xl text-gradient">Featured Projects</h2>
           <p className="max-w-3xl mx-auto text-xl text-gray-800">
-            A showcase of my recent work in web development, e-commerce, and digital solutions
+            A showcase of my recent work in enterprise CRM, real-time tracking, and scalable eCommerce solutions
           </p>
         </motion.div>
 
@@ -169,7 +221,7 @@ const Projects = () => {
                     alt={project.title}
                     width={600}
                     height={400}
-                    className="object-cover w-full h-64 transition-transform duration-300 group-hover:scale-105 rounded-xl"
+                    className="object-contain w-full h-64 transition-transform duration-300 group-hover:scale-105 rounded-xl bg-gray-50"
                     sizes="(max-width: 768px) 100vw, 50vw"
                   />
                   <div className="absolute inset-0 flex items-center justify-center transition-opacity duration-300 opacity-0 bg-black/40 group-hover:opacity-100">

@@ -168,6 +168,9 @@ const Blog = () => {
                       src={post.thumbnail}
                       alt={post.title}
                       className="w-full h-48 object-cover transition-transform duration-300 group-hover:scale-105 rounded-xl"
+                      loading="lazy"
+                      decoding="async"
+                      referrerPolicy="no-referrer"
                       onError={(e) => {
                         // Fallback to placeholder if image fails to load
                         const target = e.target as HTMLImageElement
