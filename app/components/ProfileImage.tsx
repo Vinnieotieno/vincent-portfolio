@@ -16,7 +16,7 @@ const ProfileImage = ({
   className = "", 
   priority = false,
   sizes = "(max-width: 768px) 280px, 320px",
-  src = "/vincent.webp",
+  src = "/vincent.jpeg",
   alt = "Vincent Otieno"
 }: ProfileImageProps) => {
   return (

@@ -104,7 +104,7 @@ const About = () => {
               <div className="space-y-3">
                 <div>
                   <div className="font-medium text-gray-900">Program in Software Engineering</div>
-                  <div className="text-gray-800">ALX (in progress)</div>
+                  <div className="text-gray-800">ALX</div>
                 </div>
                 <div>
                   <div className="font-medium text-gray-900">BSc. Mathematics and Computer Science</div>
